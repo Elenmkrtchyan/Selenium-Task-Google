@@ -22,6 +22,7 @@ public class Test1 extends SeleniumBase {
             pageOne.checkIfElementDisplayed();
             pageOne.checkPrice("$ 67 000");
             pageOne.checkName("2021  Tesla Model Y");
+            pageOne.checkIfItIsOne();
 
 
 

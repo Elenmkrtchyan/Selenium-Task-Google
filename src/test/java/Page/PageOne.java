@@ -38,6 +38,10 @@ public class PageOne {
     @FindBy(id= "search-btn")
     WebElement findSearchButton2;
 
+    @FindBy(id= "research-btn")
+    WebElement findOne;
+
+
 
     public PageOne(WebDriver driver) {
         this.driver = driver;
@@ -97,5 +101,13 @@ public void clickSearchButton(){
     public void checkName (String expectedTitle) {
         String actualTitle = driver.findElement(By.xpath("//*[@id=\"ad-2732552\"]/div[2]/a/div/span")).getText();
         Assert.assertEquals(actualTitle, expectedTitle, "The Title NOT match!!!!");
+    }
+
+
+    public void checkIfItIsOne(){
+        String actualTitle = findOne.getText();
+        String expectedTitle = "\uE8B6 1";
+        Assert.assertEquals(actualTitle, expectedTitle, "The Title NOT match!!!!");
+
     }
 }
